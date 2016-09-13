@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dotinstall.myapplication01">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <!-- アプリのメイン（入り口）となる Activity を起動するときの Action を受け取る-->
+                <!-- Intent クラスに定義されている ACTION_MAIN 定数の実態は "android.intent.action.MAIN" という文字列-->
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- ランチャーからの起動のものを受け取る-->
+                <!-- Intent クラスに定義されている CATEGORY_LAUNCHER 定数の実態は "android.intent.category.LAUNCHER" という文字列-->
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--<activity-->
+            <!--android:name=".MainActivity"-->
+            <!--android:label="@string/app_name">-->
+
+            <!--<intent-filter>-->
+
+            <!--</intent-filter>-->
+        <!--</activity>-->
+    </application>
+
+</manifest>
