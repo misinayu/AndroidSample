@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MultiActivity</string>
+    <string name="next">次の画面へ</string>
+    <string name="seconde">Secondに移ったよ</string>
+</resources>
