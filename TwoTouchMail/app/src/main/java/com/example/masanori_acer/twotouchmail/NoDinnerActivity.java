@@ -43,7 +43,7 @@ public class NoDinnerActivity extends AppCompatActivity
         Uri uri = Uri.parse("mailto:" + res.getString(R.string.mail_to).toString());
         Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
         intent.putExtra(Intent.EXTRA_SUBJECT, title);
-        intent.putExtra(Intent.EXTRA_TEXT, "遅くなるので食事いりません。" + "　連絡が遅くなってごめんなさい。" + "いつもありがとう");
+        intent.putExtra(Intent.EXTRA_TEXT, "遅くなるので食事いりません。" + "\n連絡が遅くなってごめんなさい。" + "いつもありがとう。");
         startActivity(intent);
         return true;
     }
