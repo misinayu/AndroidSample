@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">これ覚えておきたいねん</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_mysize">体のサイズ</string>
+    <string name="title_property">持ち物</string>
+    <string name="title_memorial">記念日</string>
+    <string name="neck">首回り</string>
+    <string name="sleeve">そで丈</string>
+    <string name="waist">胴回り</string>
+    <string name="inside_leg">股下</string>
+    <string name="car_number">車のナンバー</string>
+    <string name="phone_number">携帯番号</string>
+    <string name="wedding">結婚記念日</string>
+    <string name="birthday">妻の誕生日</string>
+    <string name="birthday1">子供の誕生日１</string>
+    <string name="birthday2">子供の誕生日２</string>
+    <string name="birthday3">子供の誕生日３</string>
+    
+</resources>
