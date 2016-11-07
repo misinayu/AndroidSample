@@ -1,12 +1,14 @@
 package com.example.masanori_acer.neverforget;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 
 /**
@@ -58,6 +60,92 @@ public class MemorialFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences pref = this.getActivity().getSharedPreferences("memorial", Context.MODE_PRIVATE);
+        int wedding = pref.getInt("wedding", 0);
+        int birthday = pref.getInt("birthday", 0);
+        int birthday1 = pref.getInt("birthday1", 0);
+        int birthday2 = pref.getInt("birthday2", 0);
+        int birthday3 = pref.getInt("birthday3", 0);
+        EditText etextWedding = (EditText)getView().findViewById(R.id.etextWedding);
+        if (wedding != 0){
+            etextWedding.setText(Integer.toString(wedding));
+        }
+        EditText etextBirthday = (EditText)getView().findViewById(R.id.etextBirthday);
+        if (birthday != 0){
+            etextBirthday.setText(Integer.toString(birthday));
+        }
+        EditText etextBirthday1 = (EditText)getView().findViewById(R.id.etextBirthday1);
+        if (birthday1 != 0){
+            etextBirthday1.setText(Integer.toString(birthday1));
+        }
+        EditText etextBirthday2 = (EditText)getView().findViewById(R.id.etextBirthday2);
+        if (birthday2 != 0){
+            etextBirthday2.setText(Integer.toString(birthday2));
+        }
+        EditText etextBirthday3 = (EditText)getView().findViewById(R.id.etextBirthday3);
+        if (birthday3 != 0){
+            etextBirthday3.setText(Integer.toString(birthday3));
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        EditText etextWedding = (EditText)getView().findViewById(R.id.etextWedding);
+        EditText etextBirthday = (EditText)getView().findViewById(R.id.etextBirthday);
+        EditText etextBirthday1 = (EditText)getView().findViewById(R.id.etextBirthday1);
+        EditText etextBirthday2 = (EditText)getView().findViewById(R.id.etextBirthday2);
+        EditText etextBirthday3 = (EditText)getView().findViewById(R.id.etextBirthday3);
+
+        int wedding;
+        try {
+            wedding = Integer.parseInt(etextWedding.getText().toString());
+        }catch (NumberFormatException e){
+            wedding = 0;
+        }
+
+        int birthday;
+        try {
+            birthday = Integer.parseInt(etextBirthday.getText().toString());
+        }catch (NumberFormatException e){
+            birthday = 0;
+        }
+
+        int birthday1;
+        try {
+            birthday1 = Integer.parseInt(etextBirthday1.getText().toString());
+        }catch (NumberFormatException e){
+            birthday1 = 0;
+        }
+
+        int birthday2;
+        try {
+            birthday2 = Integer.parseInt(etextBirthday2.getText().toString());
+        }catch (NumberFormatException e){
+            birthday2 = 0;
+        }
+
+        int birthday3;
+        try {
+            birthday3 = Integer.parseInt(etextBirthday3.getText().toString());
+        }catch (NumberFormatException e){
+            birthday3 = 0;
+        }
+
+        SharedPreferences pref = this.getActivity().getSharedPreferences("memorial", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putInt("wedding", wedding);
+        editor.putInt("birthday", birthday);
+        editor.putInt("birthday1", birthday1);
+        editor.putInt("birthday2", birthday2);
+        editor.putInt("birthday3", birthday3);
+        editor.apply();
     }
 
     @Override

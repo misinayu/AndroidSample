@@ -1,12 +1,14 @@
 package com.example.masanori_acer.neverforget;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 
 /**
@@ -58,6 +60,50 @@ public class PropertyFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        SharedPreferences pref = this.getActivity().getSharedPreferences("property", Context.MODE_PRIVATE);
+        int carNum = pref.getInt("carNum", 0);
+        int phoneNum = pref.getInt("phoneNum", 0);
+        EditText etextCarNum = (EditText)getView().findViewById(R.id.etextCarNum);
+        if (carNum != 0){
+            etextCarNum.setText(Integer.toString(carNum));
+        }
+        EditText etextPhoneNum = (EditText)getView().findViewById(R.id.etextPhoneNum);
+        if (phoneNum != 0){
+            etextPhoneNum.setText(Integer.toString(phoneNum));
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        EditText etextCarNum = (EditText)getView().findViewById(R.id.etextCarNum);
+        EditText etextPhoneNum = (EditText)getView().findViewById(R.id.etextPhoneNum);
+        int carNum;
+        try {
+            carNum = Integer.parseInt(etextCarNum.getText().toString());
+        }catch (NumberFormatException e){
+            carNum = 0;
+        }
+
+        int phoneNum;
+        try {
+            phoneNum = Integer.parseInt(etextPhoneNum.getText().toString());
+        }catch (NumberFormatException e){
+            phoneNum = 0;
+        }
+
+        SharedPreferences pref = getActivity().getSharedPreferences("property", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putInt("carNum", carNum);
+        editor.putInt("phoneNum", phoneNum);
+        editor.apply();
     }
 
     @Override

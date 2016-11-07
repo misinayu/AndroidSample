@@ -105,19 +105,19 @@ public class MysizeFragment extends Fragment {
         }
         int sleeve;
         try{
-            sleeve = Integer.parseInt(edText1.getText().toString());
+            sleeve = Integer.parseInt(edText2.getText().toString());
         }catch (NumberFormatException e){
             sleeve = 0;
         }
         int waist;
         try{
-            waist = Integer.parseInt(edText1.getText().toString());
+            waist = Integer.parseInt(edText3.getText().toString());
         }catch (NumberFormatException e){
             waist = 0;
         }
         int insideLeg;
         try{
-            insideLeg = Integer.parseInt(edText1.getText().toString());
+            insideLeg = Integer.parseInt(edText4.getText().toString());
         }catch (NumberFormatException e){
             insideLeg = 0;
         }
