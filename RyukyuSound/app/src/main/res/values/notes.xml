@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="notes">
+        <item>@raw/ab7</item>
+        <item>@raw/g7</item>
+        <item>@raw/eb7</item>
+        <item>@raw/db7</item>
+        <item>@raw/c7</item>
+        <item>@raw/ab6</item>
+        <item>@raw/g6</item>
+        <item>@raw/eb6</item>
+        <item>@raw/db6</item>
+        <item>@raw/c6</item>
+    </integer-array>
+</resources>
