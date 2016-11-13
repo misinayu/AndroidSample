@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">AvoidObstacle</string>
+    <string name="app_name">障害物レース</string>
+    <string name="goal">Goal</string>
+    <string name="start">Start</string>
+    <string name="finished">ゴールしました！</string>
+    <string name="failed">落っこちました！</string>
+    <string name="collision">衝突しました！</string>
+    <string name="is_continue">続けますか？</string>
 </resources>
