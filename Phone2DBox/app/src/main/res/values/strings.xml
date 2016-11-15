@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Phone2DBox</string>
+    <string name="take_picture">写真を撮る</string>
+    <string name="login">ログイン</string>
+    <string name="logout">ログアウト</string>
 </resources>
