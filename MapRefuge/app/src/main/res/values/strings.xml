@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">MapRefuge</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">避難所マップ</string>
 </resources>
