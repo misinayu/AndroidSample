@@ -1,4 +1,28 @@
 <resources>
     <string name="app_name">JogRecord</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">ジョギング</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wifi_confirm_dialog_title">WIFIをオフにしますか</string>
+    <string name="wifi_confirm_dialog_message">市街地を走ると、WIFIを拾って現在地が飛ぶことがあります</string>
+    <string name="alert_dialog_yes">YES</string>
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_no">NO</string>
+    <string name="alert_dialog_cansel">CANCEL</string>
+    <string name="save_confirm_dialog_title">この走行を記録しますか</string>
+    <string name="save_confirm_dialog_ng">外部へのファイルの保存が許可されなかったので、記録できません</string>
+    <string name="text_on">Stop</string>
+    <string name="text_off">Start</string>
+    <string name="eltime">経過時間</string>
+    <string name="chronometer_format">%s</string>
+    <string name="distance">移動距離</string>
+    <string name="position">スタート地点</string>
+    <string name="view">一覧</string>
+    <string name="ret">戻る</string>
+
+    <string name="empty">表示するデータがありません</string>
+    <string name="second">秒</string>
+    <string name="km">km</string>
+    <string name="speed">時速</string>
+    <string name="action_view">一覧</string>
+    <string name="action_quit">終了</string>
 </resources>
